@@ -29,12 +29,6 @@ The Power BI report therefore represents the visible analytical output of a much
 
 ---
 
-# 1. Power BI Report Preview
-
-![GM SkillsFlow Power BI Executive Overview](../assets/powerbi/gm-skillsflow-overview.png)
-
-> Replace the image path above with the final location of the Power BI screenshot in the repository.
-
 The current Power BI executive overview brings together labour market, apprenticeship and youth transition indicators into a single Greater Manchester intelligence view.
 
 The current dashboard provides headline indicators for:
