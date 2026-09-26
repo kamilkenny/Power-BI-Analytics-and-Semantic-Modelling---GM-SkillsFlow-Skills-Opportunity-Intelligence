@@ -1438,6 +1438,9 @@ The result is a Power BI reporting layer backed by a complete data engineering a
 ---
 
 ## GM SkillsFlow
+<img width="1412" height="792" alt="Power BI Dash" src="https://github.com/user-attachments/assets/8cc239f7-fc19-4be5-922e-0653b63aaac8" />
+
+
 
 **Greater Manchester Skills & Opportunity Intelligence**
 
