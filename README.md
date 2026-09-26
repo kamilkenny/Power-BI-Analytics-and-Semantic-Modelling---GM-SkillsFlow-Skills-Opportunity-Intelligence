@@ -6,7 +6,44 @@
 
 <img width="1280" height="720" alt="GM SkillsFlow  Skills   Opportunity Intelligence" src="https://github.com/user-attachments/assets/bba86b39-732a-46c3-8879-b1da69f34f82" />
 
+## Final Architecture Summary
 
+```mermaid
+flowchart TB
+
+    A[Public Education, Skills and Labour Market Data]
+
+    A --> B[Microsoft Fabric Ingestion]
+
+    B --> C[Bronze Lakehouse]
+
+    C --> D[PySpark Validation]
+
+    D --> E[Silver Lakehouse]
+
+    E --> F[Conformed Analytical Models]
+
+    F --> G[Gold Warehouse]
+
+    G --> H[Dimensions and Facts]
+
+    H --> I[Power BI Semantic Model]
+
+    I --> J[DAX Measures and KPIs]
+
+    J --> K[Power BI Reports]
+
+    K --> L[Greater Manchester Decision Intelligence]
+
+    M[Audit and Data Quality] --> B
+    M --> D
+    M --> G
+
+    N[Reference and Historical Models] --> F
+    N --> G
+```
+
+---
 
 ## GM SkillsFlow | Skills & Opportunity Intelligence
 
@@ -1385,44 +1422,7 @@ The reporting layer can continue to evolve while the platform maintains a consis
 
 ---
 
-## Final Architecture Summary
 
-```mermaid
-flowchart TB
-
-    A[Public Education, Skills and Labour Market Data]
-
-    A --> B[Microsoft Fabric Ingestion]
-
-    B --> C[Bronze Lakehouse]
-
-    C --> D[PySpark Validation]
-
-    D --> E[Silver Lakehouse]
-
-    E --> F[Conformed Analytical Models]
-
-    F --> G[Gold Warehouse]
-
-    G --> H[Dimensions and Facts]
-
-    H --> I[Power BI Semantic Model]
-
-    I --> J[DAX Measures and KPIs]
-
-    J --> K[Power BI Reports]
-
-    K --> L[Greater Manchester Decision Intelligence]
-
-    M[Audit and Data Quality] --> B
-    M --> D
-    M --> G
-
-    N[Reference and Historical Models] --> F
-    N --> G
-```
-
----
 
 ## Project Design Philosophy
 
