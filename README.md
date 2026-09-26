@@ -5,7 +5,8 @@
 
 ## GM SkillsFlow | Skills & Opportunity Intelligence
 
-<img width="1386" height="787" alt="Screenshot 2026-09-26 103610" src="https://github.com/user-attachments/assets/ae39a78a-3b10-4167-b472-81d0870882b9" />
+<img width="1332" height="755" alt="the polished power BI" src="https://github.com/user-attachments/assets/64f360a3-7e47-4f21-8b50-1eedc7f3509e" />
+
 
 
 ## From Public Data to Decision Intelligence
@@ -1443,7 +1444,7 @@ The result is a Power BI reporting layer backed by a complete data engineering a
 
 
 **Greater Manchester Skills & Opportunity Intelligence**
-
+<img width="1386" height="787" alt="Screenshot 2026-09-26 103610" src="https://github.com/user-attachments/assets/ae39a78a-3b10-4167-b472-81d0870882b9" />
 Connecting:
 
 **Education → Skills → Apprenticeships → Youth Participation → Labour Market Opportunity**
