@@ -6,7 +6,9 @@
 ## GM SkillsFlow | Skills & Opportunity Intelligence
 
 <img width="1386" height="787" alt="Screenshot 2026-09-26 103610" src="https://github.com/user-attachments/assets/ae39a78a-3b10-4167-b472-81d0870882b9" />
-#  From Public Data to Decision Intelligence
+
+
+## From Public Data to Decision Intelligence
 
 Power BI does not connect directly to each source dataset.
 
