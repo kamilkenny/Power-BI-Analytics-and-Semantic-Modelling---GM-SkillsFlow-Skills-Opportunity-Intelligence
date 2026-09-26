@@ -6,7 +6,146 @@
 ## GM SkillsFlow | Skills & Opportunity Intelligence
 
 <img width="1386" height="787" alt="Screenshot 2026-09-26 103610" src="https://github.com/user-attachments/assets/ae39a78a-3b10-4167-b472-81d0870882b9" />
+#  From Public Data to Decision Intelligence
 
+Power BI does not connect directly to each source dataset.
+
+The information shown in the report travels through several controlled stages before becoming available for analysis.
+
+The overall journey is:
+
+```text
+Public Data Sources
+        |
+        v
+Automated Ingestion
+        |
+        v
+Bronze Lakehouse
+        |
+        v
+Validation and Profiling
+        |
+        v
+Silver Lakehouse
+        |
+        v
+Conformed Analytical Data
+        |
+        v
+Silver Business Modelling
+        |
+        v
+Gold Warehouse
+        |
+        v
+Dimensional Model
+        |
+        v
+Power BI Semantic Model
+        |
+        v
+DAX Measures and KPIs
+        |
+        v
+Interactive Power BI Reports
+        |
+        v
+Greater Manchester Skills and Opportunity Intelligence
+```
+
+This architecture separates data acquisition from data interpretation.
+
+It also ensures that Power BI is not responsible for repeatedly cleaning and restructuring raw datasets.
+
+Instead, Power BI receives data that has already been validated, governed and prepared for analytical use.
+
+
+#  Semantic Model Design Principles
+
+The semantic model was designed around reusable dimensions and subject specific facts.
+
+The general principle follows a star schema approach.
+
+```text
+                  Borough
+                     |
+                     |
+                     v
+Time ----------- Fact Table ----------- Category
+                     |
+                     |
+                     v
+                Classification
+```
+
+For example, several reporting areas can share the same borough dimension.
+
+This means that a single borough selection can filter:
+
+* Employment
+* Apprenticeships
+* NEET
+* Participation
+* Other related measures
+
+The semantic model therefore provides a common analytical language across different subject domains.
+
+Its purpose is not simply to expose database tables.
+
+Its purpose is to translate the physical warehouse model into a structure that is intuitive for business intelligence.
+
+---
+
+# Measures Before Visuals
+
+An important design principle is that important business calculations should be defined centrally wherever possible.
+
+The report uses semantic measures for concepts such as:
+
+```DAX
+Latest Employment Rate (%)
+
+Latest Economic Inactivity Rate (%)
+
+Latest Apprenticeship Starts
+
+Latest Apprenticeship Achievements
+
+Latest NEET Rate
+
+Average Employment Rate (%)
+```
+
+The analytical sequence is:
+
+```text
+Warehouse Data
+      |
+      v
+Relationships
+      |
+      v
+Semantic Measures
+      |
+      v
+Power BI Visuals
+```
+
+This is preferable to embedding independent calculations into each chart.
+
+A centrally defined measure provides:
+
+* Consistency
+* Reusability
+* Easier maintenance
+* Easier testing
+* Clearer business definitions
+* Reduced duplication
+
+If the definition of a KPI changes, it can be corrected centrally rather than modifying every visual independently.
+
+---
 
 **GM SkillsFlow** is an end to end data intelligence platform designed to connect education, apprenticeships, youth participation, skills pathways and labour market opportunity across the ten boroughs of Greater Manchester.
 
@@ -132,59 +271,6 @@ The project converts these separate domains into a common data platform so that 
 
 ---
 
-# 3. From Public Data to Decision Intelligence
-
-Power BI does not connect directly to each source dataset.
-
-The information shown in the report travels through several controlled stages before becoming available for analysis.
-
-The overall journey is:
-
-```text
-Public Data Sources
-        |
-        v
-Automated Ingestion
-        |
-        v
-Bronze Lakehouse
-        |
-        v
-Validation and Profiling
-        |
-        v
-Silver Lakehouse
-        |
-        v
-Conformed Analytical Data
-        |
-        v
-Silver Business Modelling
-        |
-        v
-Gold Warehouse
-        |
-        v
-Dimensional Model
-        |
-        v
-Power BI Semantic Model
-        |
-        v
-DAX Measures and KPIs
-        |
-        v
-Interactive Power BI Reports
-        |
-        v
-Greater Manchester Skills and Opportunity Intelligence
-```
-
-This architecture separates data acquisition from data interpretation.
-
-It also ensures that Power BI is not responsible for repeatedly cleaning and restructuring raw datasets.
-
-Instead, Power BI receives data that has already been validated, governed and prepared for analytical use.
 
 ---
 
@@ -791,91 +877,6 @@ This prevents individual visuals from becoming responsible for defining their ow
 
 ---
 
-# 16. Semantic Model Design Principles
-
-The semantic model was designed around reusable dimensions and subject specific facts.
-
-The general principle follows a star schema approach.
-
-```text
-                  Borough
-                     |
-                     |
-                     v
-Time ----------- Fact Table ----------- Category
-                     |
-                     |
-                     v
-                Classification
-```
-
-For example, several reporting areas can share the same borough dimension.
-
-This means that a single borough selection can filter:
-
-* Employment
-* Apprenticeships
-* NEET
-* Participation
-* Other related measures
-
-The semantic model therefore provides a common analytical language across different subject domains.
-
-Its purpose is not simply to expose database tables.
-
-Its purpose is to translate the physical warehouse model into a structure that is intuitive for business intelligence.
-
----
-
-# 17. Measures Before Visuals
-
-An important design principle is that important business calculations should be defined centrally wherever possible.
-
-The report uses semantic measures for concepts such as:
-
-```DAX
-Latest Employment Rate (%)
-
-Latest Economic Inactivity Rate (%)
-
-Latest Apprenticeship Starts
-
-Latest Apprenticeship Achievements
-
-Latest NEET Rate
-
-Average Employment Rate (%)
-```
-
-The analytical sequence is:
-
-```text
-Warehouse Data
-      |
-      v
-Relationships
-      |
-      v
-Semantic Measures
-      |
-      v
-Power BI Visuals
-```
-
-This is preferable to embedding independent calculations into each chart.
-
-A centrally defined measure provides:
-
-* Consistency
-* Reusability
-* Easier maintenance
-* Easier testing
-* Clearer business definitions
-* Reduced duplication
-
-If the definition of a KPI changes, it can be corrected centrally rather than modifying every visual independently.
-
----
 
 # 18. Current Executive Overview
 
