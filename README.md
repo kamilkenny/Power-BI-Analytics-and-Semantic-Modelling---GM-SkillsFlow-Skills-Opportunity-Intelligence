@@ -1438,12 +1438,14 @@ The result is a Power BI reporting layer backed by a complete data engineering a
 
 ---
 
-## GM SkillsFlow
+## GM SkillsFlow 
+## SCHEMA 1
 <img width="1412" height="792" alt="Power BI Dash" src="https://github.com/user-attachments/assets/8cc239f7-fc19-4be5-922e-0653b63aaac8" />
 
 
 
 **Greater Manchester Skills & Opportunity Intelligence**
+## SCHEMA 2
 <img width="1386" height="787" alt="Screenshot 2026-09-26 103610" src="https://github.com/user-attachments/assets/ae39a78a-3b10-4167-b472-81d0870882b9" />
 Connecting:
 
