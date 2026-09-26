@@ -3,9 +3,11 @@
 
 # Power BI Analytics and Semantic Modelling
 
+
+<img width="1332" height="755" alt="the polished power BI" src="https://github.com/user-attachments/assets/bbf6d82b-dd57-436c-8909-aa0438ede6fb" />
+
 ## GM SkillsFlow | Skills & Opportunity Intelligence
 
-<img width="1332" height="755" alt="the polished power BI" src="https://github.com/user-attachments/assets/64f360a3-7e47-4f21-8b50-1eedc7f3509e" />
 
 ## SCHEMA 1
 <img width="1412" height="792" alt="Power BI Dash" src="https://github.com/user-attachments/assets/8cc239f7-fc19-4be5-922e-0653b63aaac8" />
